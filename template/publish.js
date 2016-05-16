@@ -200,7 +200,7 @@ function addSignatureTypes(f) {
 function addAttribs(f) {
   var attribs = helper.getAttribs(f);
 
-  f.attribs = '<span class="type-signature">' + htmlsafe(attribs.length ? '<' + attribs.join(', ') + '> ' : '') + '</span>';
+  f.attribs = '<span class="type-signature">' + htmlsafe(attribs.length ? '(' + attribs.join(', ') + ') ' : '') + '</span>';
 }
 
 function shortenPaths(files, commonPrefix) {

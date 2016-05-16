@@ -168,14 +168,18 @@ function addSignatureParams(f) {
     var element = params[i];
     var seperator = (i > 0) ? ', ' : '';
 
-    if (!new RegExp("class=[\"|']"+optionalClass+"[\"|']").test(element)) {
+    if (!/class=["|']optional["|']/i.test(element)) {
       f.signature += seperator + element;
     } else {
-      var regExp = new RegExp("<span class=[\"|']"+optionalClass+"[\"|']>(.*?)<\\/span>", "i");
-      f.signature += element.replace(regExp, " $`["+seperator+"$1$']");
+      f.signature += element.replace(/<span class=[\"|']optional[\"|']>(.*?)<\/span>/i, "$`["+seperator+"$1$']");
     }
 
   }
+
+  params.forEach(function (element) {
+
+
+  });
 
   f.signature += ')';
 }
@@ -290,14 +294,14 @@ function generateSourceFiles(sourceFiles) {
     helper.registerLink(sourceFiles[file].shortened, sourceOutfile);
 
     try {
-      
+
       var language = "javascript";
       var matches = /\.([a-z0-9]+?)$/i.exec(file);
       if (matches && matches.length > 0) {
         language = matches[1];
         language = (language == "js") ? "javascript" : language;
       }
-      
+
       source = {
         kind: 'source',
         lang: language,

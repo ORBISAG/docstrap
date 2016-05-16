@@ -174,6 +174,9 @@ var tasks = {
 			files : {
 				'template/static/scripts/docstrap.lib.js' : [
 					'bower_components/jquery/dist/jquery.min.js',
+//					'bower_components/sunlight/src/sunlight.js',
+//					'bower_components/sunlight/src/lang/sunlight.xml.js',
+//					'bower_components/sunlight/src/**/*.js',
 					'bower_components/prism/prism.js',
 					'bower_components/prism/components/prism-clike.min.js',
 					'bower_components/prism/components/prism-javascript.min.js',

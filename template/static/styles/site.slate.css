@@ -3884,7 +3884,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   line-height: 1;
   color: #272B30;
   text-align: center;
-  background-color: #3A3F44;
+  background-color: #999;
   border: 1px solid rgba(0, 0, 0, 0.6);
   border-radius: 4px;
 }
@@ -6957,6 +6957,7 @@ textarea {
   border-color: #f89406;
 }
 .has-warning .input-group-addon {
+  background-color: #3A3F44;
   border-color: rgba(0, 0, 0, 0.6);
 }
 .has-error .help-block,
@@ -6977,6 +6978,7 @@ textarea {
   border-color: #ee5f5b;
 }
 .has-error .input-group-addon {
+  background-color: #3A3F44;
   border-color: rgba(0, 0, 0, 0.6);
 }
 .has-success .help-block,
@@ -6997,12 +6999,14 @@ textarea {
   border-color: #62c462;
 }
 .has-success .input-group-addon {
+  background-color: #3A3F44;
   border-color: rgba(0, 0, 0, 0.6);
 }
 legend {
   color: #fff;
 }
 .input-group-addon {
+  background-color: #3A3F44;
   background-image: -webkit-linear-gradient(#484e55, #3A3F44 60%, #313539);
   background-image: -o-linear-gradient(#484e55, #3A3F44 60%, #313539);
   background-image: linear-gradient(#484e55, #3A3F44 60%, #313539);

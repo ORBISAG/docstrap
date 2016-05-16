@@ -9,3 +9,4 @@ testdocs/*
 npm-debug.log
 themes
 testdocs
+.vscode

@@ -9,10 +9,10 @@
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<link type="text/css" rel="stylesheet" href="styles/sunlight.<?js= this.navOptions.syntaxTheme ?>.css">
-
+	<!--<link type="text/css" rel="stylesheet" href="styles/sunlight.<?js= this.navOptions.syntaxTheme ?>.css">-->
+	<link type="text/css" rel="stylesheet" href="styles/prism.css">
+	<link type="text/css" rel="stylesheet" href="styles/prism-estuary.light.css">
 	<link type="text/css" rel="stylesheet" href="styles/site.<?js= this.navOptions.theme ?>.css">
-
 </head>
 
 <body>
@@ -148,22 +148,29 @@ $( function () {
 		if ( lang ) {
 
 			$this
-			.addClass( "sunlight-highlight-" + lang )
-			.addClass( "linenums" )
+			.addClass( "language" + lang )
+			.addClass( "line-numbers" )
 			.html( example.html() );
 
 		}
 	} );
-
-	Sunlight.highlightAll( {
-		lineNumbers : <?js= this.navOptions.linenums || false ?>,
-		showMenu : true,
-		enableDoclinks : true
-	} );
+	
+	Prism.hooks.add('complete', function () {
+		var documentHash = document.location.hash || null;
+		if (documentHash) {
+			var matches = /^#line-([0-9]+?)$/i.exec(documentHash);
+			if (matches && matches.length > 0) {
+				window.setTimeout(function() {
+					$.scrollTo($(".line-numbers-rows span")[matches[1] - 1], 1000, { offset: -50 });
+				}, 100);
+			}
+		}
+	});
 
 	$.catchAnchorLinks( {
         navbarOffset: 10
 	} );
+	
 	$( "#toc" ).toc( {
 		anchorName  : function ( i, heading, prefix ) {
 			return $( heading ).attr( "id" ) || ( prefix + i );

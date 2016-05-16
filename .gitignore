@@ -10,3 +10,4 @@ themes*
 npm-debug.log
 .DS_Store
 ._*
+.vscode

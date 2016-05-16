@@ -290,16 +290,24 @@ function generateSourceFiles(sourceFiles) {
     helper.registerLink(sourceFiles[file].shortened, sourceOutfile);
 
     try {
+      
+      var language = "javascript";
+      var matches = /\.([a-z0-9]+?)$/i.exec(file);
+      if (matches && matches.length > 0) {
+        language = matches[1];
+        language = (language == "js") ? "javascript" : language;
+      }
+      
       source = {
         kind: 'source',
+        lang: language,
         code: helper.htmlsafe(fs.readFileSync(sourceFiles[file].resolved, 'utf8'))
       };
     } catch (e) {
       handle(e);
     }
 
-    generate('source', 'Source: ' + sourceFiles[file].shortened, [source], sourceOutfile,
-      false);
+    generate('source', 'Source: ' + sourceFiles[file].shortened, [source], sourceOutfile, false);
   });
 }
 

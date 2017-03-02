@@ -168,11 +168,11 @@ function addSignatureParams(f) {
     var element = params[i];
     var seperator = (i > 0) ? ', ' : '';
 
-    if (!new RegExp("class=[\"|']"+optionalClass+"[\"|']").test(element)) {
+    if (!new RegExp("class=[\"|']" + optionalClass + "[\"|']").test(element)) {
       f.signature += seperator + element;
     } else {
-      var regExp = new RegExp("<span class=[\"|']"+optionalClass+"[\"|']>(.*?)<\\/span>", "i");
-      f.signature += element.replace(regExp, " $`["+seperator+"$1$']");
+      var regExp = new RegExp("<span class=[\"|']" + optionalClass + "[\"|']>(.*?)<\\/span>", "i");
+      f.signature += element.replace(regExp, " $`[" + seperator + "$1$']");
     }
 
   }

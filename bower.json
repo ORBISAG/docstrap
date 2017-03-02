@@ -3,8 +3,8 @@
   "version": "0.5.3",
   "dependencies": {
     "jquery": "~2.1.0",
-    "sunlight": "https://github.com/tmont/sunlight.git",
     "jquery.localScroll": "~1.4.0",
-    "bootstrap": "~3.3.6"
+    "bootstrap": "~3.3.6",
+    "prism": "^1.6.0"
   }
 }

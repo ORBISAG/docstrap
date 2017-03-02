@@ -5,7 +5,7 @@
     ?>
         <p class="code-caption"><?js= example.caption ?></p>
     <?js } ?>
-    <pre><code class="language-<?js= example.lang ?>"><?js~ example.code ?></code></pre>
+    <pre><code class="<?js= this.navOptions.linenums ? 'line-numbers' : '' ?> language-<?js= example.lang ?>"><?js~ example.code ?></code></pre>
 <?js
     });
 ?>

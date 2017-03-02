@@ -1,4 +1,10 @@
 @import "../bower_components/bootstrap/less/bootstrap.less";
+@import (less) "../bower_components/prism/themes/prism-okaidia.css";
+@import (less) "../bower_components/prism/plugins/autolinker/prism-autolinker.css";
+@import (less) "../bower_components/prism/plugins/line-highlight/prism-line-highlight.css";
+@import (less) "../bower_components/prism/plugins/line-numbers/prism-line-numbers.css";
+@import (less) "../bower_components/prism/plugins/toolbar/prism-toolbar.css";
+@import (less) "../bower_components/prism/plugins/toolbar/prism-toolbar.css";
 @import "variables.less";
 @import "bootswatch.less";
 
@@ -118,28 +124,6 @@ code {
 .member-name{
   padding-top: 100px !important;
   margin-top: -100px !important;
-}
-
-
-.sunlight-highlighted {
-  margin           : 0;
-  line-height      : auto;
-  word-break       : normal;
-  word-wrap        : normal;
-  white-space      : pre;
-  background-color : transparent;
-  border           : none;
-}
-
-.sunlight-line-number-margin {
-  .border-top-radius(0);
-  .border-right-radius(0);
-  .border-bottom-radius(0);
-  .border-left-radius(0);
-  border-width  : 0 1px 0 0;
-  font-size     : 12px;
-  line-height   : 15px;
-  padding       : ((@line-height-computed - 1) / 2) 4px !important
 }
 
 .dropdown-menu {

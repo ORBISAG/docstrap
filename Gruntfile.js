@@ -175,6 +175,14 @@ var tasks = {
 				'template/static/scripts/docstrap.lib.js' : [
 					'bower_components/jquery/dist/jquery.min.js',
 					'bower_components/prism/prism.js',
+					'bower_components/prism/components/prism-clike.min.js',
+					'bower_components/prism/components/prism-javascript.min.js',
+					'bower_components/prism/plugins/line-highlight/prism-line-highlight.min.js',
+					'bower_components/prism/plugins/line-numbers/prism-line-numbers.min.js',
+					'bower_components/prism/plugins/autolinker/prism-autolinker.min.js',
+					'bower_components/prism/plugins/toolbar/prism-toolbar.min.js',
+					'bower_components/prism/plugins/data-uri-highlight/prism-data-uri-highlight.min.js',
+					'bower_components/prism/plugins/show-language/prism-show-language.min.js',
 					'bower_components/jquery.scrollTo/jquery.scrollTo.min.js',
 					'bower_components/jquery.localScroll/jquery.localScroll.min.js',
 					'bower_components/bootstrap/dist/js/bootstrap.min.js'

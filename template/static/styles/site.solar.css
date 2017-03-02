@@ -6722,228 +6722,6 @@ button.close {
     display: none !important;
   }
 }
-.text-primary,
-.text-primary:hover {
-  color: #B58900;
-}
-.text-success,
-.text-success:hover {
-  color: #2AA198;
-}
-.text-danger,
-.text-danger:hover {
-  color: #D33682;
-}
-.text-warning,
-.text-warning:hover {
-  color: #CB4B16;
-}
-.text-info,
-.text-info:hover {
-  color: #268BD2;
-}
-.bg-success,
-.bg-info,
-.bg-warning,
-.bg-danger {
-  color: #fff;
-}
-table .success td,
-.table .success td,
-table .info td,
-.table .info td,
-table .warning td,
-.table .warning td,
-table .danger td,
-.table .danger td,
-table .success th,
-.table .success th,
-table .info th,
-.table .info th,
-table .warning th,
-.table .warning th,
-table .danger th,
-.table .danger th {
-  color: #fff;
-}
-.has-warning .help-block,
-.has-warning .control-label,
-.has-warning .radio,
-.has-warning .checkbox,
-.has-warning .radio-inline,
-.has-warning .checkbox-inline,
-.has-warning.radio label,
-.has-warning.checkbox label,
-.has-warning.radio-inline label,
-.has-warning.checkbox-inline label,
-.has-warning .form-control-feedback {
-  color: #CB4B16;
-}
-.has-warning .form-control,
-.has-warning .form-control:focus,
-.has-warning .input-group-addon {
-  border-color: #CB4B16;
-}
-.has-error .help-block,
-.has-error .control-label,
-.has-error .radio,
-.has-error .checkbox,
-.has-error .radio-inline,
-.has-error .checkbox-inline,
-.has-error.radio label,
-.has-error.checkbox label,
-.has-error.radio-inline label,
-.has-error.checkbox-inline label,
-.has-error .form-control-feedback {
-  color: #D33682;
-}
-.has-error .form-control,
-.has-error .form-control:focus,
-.has-error .input-group-addon {
-  border-color: #D33682;
-}
-.has-success .help-block,
-.has-success .control-label,
-.has-success .radio,
-.has-success .checkbox,
-.has-success .radio-inline,
-.has-success .checkbox-inline,
-.has-success.radio label,
-.has-success.checkbox label,
-.has-success.radio-inline label,
-.has-success.checkbox-inline label,
-.has-success .form-control-feedback {
-  color: #2AA198;
-}
-.has-success .form-control,
-.has-success .form-control:focus,
-.has-success .input-group-addon {
-  border-color: #2AA198;
-}
-.input-group-addon {
-  color: #839496;
-}
-/**
- * prism.js default theme for JavaScript, CSS and HTML
- * Based on dabblet (http://dabblet.com)
- * @author Lea Verou
- */
-code[class*="language-"],
-pre[class*="language-"] {
-  color: black;
-  background: none;
-  text-shadow: 0 1px white;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
-pre[class*="language-"]::-moz-selection,
-pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection,
-code[class*="language-"] ::-moz-selection {
-  text-shadow: none;
-  background: #b3d4fc;
-}
-pre[class*="language-"]::selection,
-pre[class*="language-"] ::selection,
-code[class*="language-"]::selection,
-code[class*="language-"] ::selection {
-  text-shadow: none;
-  background: #b3d4fc;
-}
-@media print {
-  code[class*="language-"],
-  pre[class*="language-"] {
-    text-shadow: none;
-  }
-}
-/* Code blocks */
-pre[class*="language-"] {
-  padding: 1em;
-  margin: .5em 0;
-  overflow: auto;
-}
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  background: #f5f2f0;
-}
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-  padding: .1em;
-  border-radius: .3em;
-  white-space: normal;
-}
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: slategray;
-}
-.token.punctuation {
-  color: #999;
-}
-.namespace {
-  opacity: .7;
-}
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol,
-.token.deleted {
-  color: #905;
-}
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-  color: #690;
-}
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-  color: #a67f59;
-  background: rgba(255, 255, 255, 0.5);
-}
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-  color: #07a;
-}
-.token.function {
-  color: #DD4A68;
-}
-.token.regex,
-.token.important,
-.token.variable {
-  color: #e90;
-}
-.token.important,
-.token.bold {
-  font-weight: bold;
-}
-.token.italic {
-  font-style: italic;
-}
-.token.entity {
-  cursor: help;
-}
 /**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
@@ -7176,29 +6954,106 @@ pre.code-toolbar > .toolbar span:focus {
   color: inherit;
   text-decoration: none;
 }
-/* Lighter Background for Okaidia-Theme*/
-pre[class*="language-"] {
-  background: #2a2a2a;
+.text-primary,
+.text-primary:hover {
+  color: #B58900;
 }
-.language-css .token.string,
-.style .token.string,
-.token.entity,
-.token.operator,
-.token.url {
-  background-color: transparent;
+.text-success,
+.text-success:hover {
+  color: #2AA198;
 }
-.line-highlight {
-  background: linear-gradient(to right, rgba(158, 122, 102, 0.25) 70%, rgba(153, 122, 102, 0));
+.text-danger,
+.text-danger:hover {
+  color: #D33682;
 }
-.line-numbers .line-numbers-rows,
-.line-numbers-rows > span {
-  pointer-events: auto;
-  cursor: pointer;
+.text-warning,
+.text-warning:hover {
+  color: #CB4B16;
 }
-.line-numbers .line-numbers-rows.disable-pointer,
-.line-numbers-rows > span.disable-pointer {
-  pointer-events: none;
-  cursor: initial;
+.text-info,
+.text-info:hover {
+  color: #268BD2;
+}
+.bg-success,
+.bg-info,
+.bg-warning,
+.bg-danger {
+  color: #fff;
+}
+table .success td,
+.table .success td,
+table .info td,
+.table .info td,
+table .warning td,
+.table .warning td,
+table .danger td,
+.table .danger td,
+table .success th,
+.table .success th,
+table .info th,
+.table .info th,
+table .warning th,
+.table .warning th,
+table .danger th,
+.table .danger th {
+  color: #fff;
+}
+.has-warning .help-block,
+.has-warning .control-label,
+.has-warning .radio,
+.has-warning .checkbox,
+.has-warning .radio-inline,
+.has-warning .checkbox-inline,
+.has-warning.radio label,
+.has-warning.checkbox label,
+.has-warning.radio-inline label,
+.has-warning.checkbox-inline label,
+.has-warning .form-control-feedback {
+  color: #CB4B16;
+}
+.has-warning .form-control,
+.has-warning .form-control:focus,
+.has-warning .input-group-addon {
+  border-color: #CB4B16;
+}
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline,
+.has-error.radio label,
+.has-error.checkbox label,
+.has-error.radio-inline label,
+.has-error.checkbox-inline label,
+.has-error .form-control-feedback {
+  color: #D33682;
+}
+.has-error .form-control,
+.has-error .form-control:focus,
+.has-error .input-group-addon {
+  border-color: #D33682;
+}
+.has-success .help-block,
+.has-success .control-label,
+.has-success .radio,
+.has-success .checkbox,
+.has-success .radio-inline,
+.has-success .checkbox-inline,
+.has-success.radio label,
+.has-success.checkbox label,
+.has-success.radio-inline label,
+.has-success.checkbox-inline label,
+.has-success .form-control-feedback {
+  color: #2AA198;
+}
+.has-success .form-control,
+.has-success .form-control:focus,
+.has-success .input-group-addon {
+  border-color: #2AA198;
+}
+.input-group-addon {
+  color: #839496;
 }
 #main {
   margin-top: 62px;
@@ -7210,7 +7065,7 @@ pre[class*="language-"] {
 img.branding-logo {
   max-height: 30px;
   display: inline-block;
-  padding: 0;
+  padding: 0px;
   margin: -3px 5px 0 0;
 }
 #toc {
@@ -7241,20 +7096,20 @@ img.branding-logo {
 .copyright {
   font-size: 90%;
   text-align: center;
-  color: #555;
+  color: #B58900;
   width: 100%;
   display: block;
 }
 .jsdoc-message {
   font-size: 90%;
   text-align: center;
-  color: #555;
+  color: #B58900;
   width: 100%;
   display: block;
 }
 .page-title {
   font-size: 220%;
-  color: #555;
+  color: #B58900;
   font-weight: 700;
   padding-top: 10px;
   padding-bottom: 7px;

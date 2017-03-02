@@ -149,6 +149,14 @@ $( function () {
 
 		if (lang) {
 			$this
+			.addClass( "language" + lang )
+			.addClass( "line-numbers" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Prism.hooks.add('complete', function () {
 				.addClass("language-" + lang)
 				.addClass("line-numbers");
 			$code

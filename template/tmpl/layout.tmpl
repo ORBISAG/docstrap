@@ -149,10 +149,10 @@ $( function () {
 
 		if (lang) {
 			$this
-			.addClass( "language" + lang )
-			.addClass( "line-numbers" )
-			.html( example.html() );
-
+				.addClass("language-" + lang)
+				.addClass("line-numbers");
+			$code
+				.addClass("language-" + lang)
 		}
 	} );
 

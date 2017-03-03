@@ -7635,6 +7635,9 @@ pre[class*="language-"] {
   pointer-events: none;
   cursor: initial;
 }
+.jsdoc-message {
+  color: #555;
+}
 #main {
   margin-top: 62px;
 }

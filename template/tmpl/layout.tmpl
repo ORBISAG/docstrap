@@ -189,7 +189,7 @@ $( function () {
 			var matches = /^#line.([0-9]+?)$/i.exec(documentHash);
 			if (matches && matches.length > 0) {
 				window.setTimeout(function() {
-					$.scrollTo($(".line-numbers-rows span")[matches[1] - 1], 1000, { offset: -60 });
+					$.scrollTo($(".line-numbers-rows span")[matches[1] - 1], 1000, { offset: -40 });
 				}, 100);
 			}
 		}

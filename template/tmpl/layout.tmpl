@@ -127,35 +127,41 @@ $( function () {
 		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
 	} );
 
-	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
-		var $this = $( this );
+	$(".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
 
-		var example = $this.find( "code" );
-		exampleText = example.html();
-		var lang = /{@lang (.*?)}/.exec( exampleText );
-		if ( lang && lang[1] ) {
-			exampleText = exampleText.replace( lang[0], "" );
-			example.html( exampleText );
+		var $this = $(this); // the pre element
+		var $code = $this.find("code"); // the code element
+
+		var content = $code.html();
+
+		// var example = $this.find( "code" );
+		// exampleText = example.html();
+
+		var lang = /{@lang (.*?)}/.exec(content);
+
+		if (lang && lang[1]) {
+			$code.html(content.replace(lang[0], "").trim());
 			lang = lang[1];
 		} else {
-			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			var langClassMatch = $this.attr("class").match(/lang\-(\S+)/);
 			lang = langClassMatch ? langClassMatch[1] : "javascript";
 		}
 
-		if ( lang ) {
-
+		if (lang) {
 			$this
-			.addClass( "language" + lang )
-			.addClass( "line-numbers" )
-			.html( example.html() );
-
+				.addClass("language-" + lang)
+				.addClass("line-numbers");
+			$code
+				.addClass("language-" + lang)
 		}
 	} );
 
-	Prism.hooks.add('complete', function () {
+	Prism.hooks.add("complete", function () {
+		window.dispatchEvent(new HashChangeEvent("hashchange", { oldURL: window.location.href, newURL: window.location.href}));
+
 		var documentHash = document.location.hash || null;
 		if (documentHash) {
-			var matches = /^#line-([0-9]+?)$/i.exec(documentHash);
+			var matches = /^#line.([0-9]+?)$/i.exec(documentHash);
 			if (matches && matches.length > 0) {
 				window.setTimeout(function() {
 					$.scrollTo($(".line-numbers-rows span")[matches[1] - 1], 1000, { offset: -50 });

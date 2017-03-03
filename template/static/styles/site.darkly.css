@@ -7368,6 +7368,13 @@ pre.code-toolbar > .toolbar span:focus {
 pre[class*="language-"] {
   background: #2a2a2a;
 }
+.language-css .token.string,
+.style .token.string,
+.token.entity,
+.token.operator,
+.token.url {
+  background-color: transparent;
+}
 #main {
   margin-top: 62px;
 }
@@ -7378,7 +7385,7 @@ pre[class*="language-"] {
 img.branding-logo {
   max-height: 30px;
   display: inline-block;
-  padding: 0px;
+  padding: 0;
   margin: -3px 5px 0 0;
 }
 #toc {

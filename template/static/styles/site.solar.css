@@ -7200,9 +7200,6 @@ pre[class*="language-"] {
   pointer-events: none;
   cursor: initial;
 }
-.jsdoc-message {
-  color: #555;
-}
 #main {
   margin-top: 62px;
 }
@@ -7244,20 +7241,20 @@ img.branding-logo {
 .copyright {
   font-size: 90%;
   text-align: center;
-  color: #B58900;
+  color: #555;
   width: 100%;
   display: block;
 }
 .jsdoc-message {
   font-size: 90%;
   text-align: center;
-  color: #B58900;
+  color: #555;
   width: 100%;
   display: block;
 }
 .page-title {
   font-size: 220%;
-  color: #B58900;
+  color: #555;
   font-weight: 700;
   padding-top: 10px;
   padding-bottom: 7px;

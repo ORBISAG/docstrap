@@ -6722,6 +6722,306 @@ button.close {
     display: none !important;
   }
 }
+.navbar-inverse .badge {
+  background-color: #fff;
+  color: #2780E3;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+}
+.text-primary,
+.text-primary:hover {
+  color: #2780E3;
+}
+.text-success,
+.text-success:hover {
+  color: #3FB618;
+}
+.text-danger,
+.text-danger:hover {
+  color: #FF0039;
+}
+.text-warning,
+.text-warning:hover {
+  color: #FF7518;
+}
+.text-info,
+.text-info:hover {
+  color: #9954BB;
+}
+table a:not(.btn),
+.table a:not(.btn) {
+  text-decoration: underline;
+}
+table .dropdown-menu a,
+.table .dropdown-menu a {
+  text-decoration: none;
+}
+table .success,
+.table .success,
+table .warning,
+.table .warning,
+table .danger,
+.table .danger,
+table .info,
+.table .info {
+  color: #fff;
+}
+table .success a,
+.table .success a,
+table .warning a,
+.table .warning a,
+table .danger a,
+.table .danger a,
+table .info a,
+.table .info a {
+  color: #fff;
+}
+.has-warning .help-block,
+.has-warning .control-label,
+.has-warning .radio,
+.has-warning .checkbox,
+.has-warning .radio-inline,
+.has-warning .checkbox-inline,
+.has-warning.radio label,
+.has-warning.checkbox label,
+.has-warning.radio-inline label,
+.has-warning.checkbox-inline label,
+.has-warning .form-control-feedback {
+  color: #FF7518;
+}
+.has-warning .form-control,
+.has-warning .form-control:focus,
+.has-warning .input-group-addon {
+  border: 1px solid #FF7518;
+}
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline,
+.has-error.radio label,
+.has-error.checkbox label,
+.has-error.radio-inline label,
+.has-error.checkbox-inline label,
+.has-error .form-control-feedback {
+  color: #FF0039;
+}
+.has-error .form-control,
+.has-error .form-control:focus,
+.has-error .input-group-addon {
+  border: 1px solid #FF0039;
+}
+.has-success .help-block,
+.has-success .control-label,
+.has-success .radio,
+.has-success .checkbox,
+.has-success .radio-inline,
+.has-success .checkbox-inline,
+.has-success.radio label,
+.has-success.checkbox label,
+.has-success.radio-inline label,
+.has-success.checkbox-inline label,
+.has-success .form-control-feedback {
+  color: #3FB618;
+}
+.has-success .form-control,
+.has-success .form-control:focus,
+.has-success .input-group-addon {
+  border: 1px solid #3FB618;
+}
+.nav-pills > li > a {
+  border-radius: 0;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background-image: none;
+}
+.close {
+  text-decoration: none;
+  text-shadow: none;
+  opacity: 0.4;
+}
+.close:hover,
+.close:focus {
+  opacity: 1;
+}
+.alert {
+  border: none;
+}
+.alert .alert-link {
+  text-decoration: underline;
+  color: #fff;
+}
+.label {
+  border-radius: 0;
+}
+.progress {
+  height: 8px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.progress .progress-bar {
+  font-size: 8px;
+  line-height: 8px;
+}
+.panel-heading,
+.panel-footer {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.panel-default .close {
+  color: #333333;
+}
+a.list-group-item-success.active {
+  background-color: #3FB618;
+}
+a.list-group-item-success.active:hover,
+a.list-group-item-success.active:focus {
+  background-color: #379f15;
+}
+a.list-group-item-warning.active {
+  background-color: #FF7518;
+}
+a.list-group-item-warning.active:hover,
+a.list-group-item-warning.active:focus {
+  background-color: #fe6600;
+}
+a.list-group-item-danger.active {
+  background-color: #FF0039;
+}
+a.list-group-item-danger.active:hover,
+a.list-group-item-danger.active:focus {
+  background-color: #e60033;
+}
+.modal .close {
+  color: #333333;
+}
+.popover {
+  color: #333333;
+}
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: black;
+  background: none;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+@media print {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+}
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #f5f2f0;
+}
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+}
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+.token.punctuation {
+  color: #999;
+}
+.namespace {
+  opacity: .7;
+}
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #905;
+}
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #690;
+}
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5);
+}
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a;
+}
+.token.function {
+  color: #DD4A68;
+}
+.token.regex,
+.token.important,
+.token.variable {
+  color: #e90;
+}
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+.token.entity {
+  cursor: help;
+}
 /**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
@@ -6954,184 +7254,9 @@ pre.code-toolbar > .toolbar span:focus {
   color: inherit;
   text-decoration: none;
 }
-.navbar-inverse .badge {
-  background-color: #fff;
-  color: #2780E3;
-}
-body {
-  -webkit-font-smoothing: antialiased;
-}
-.text-primary,
-.text-primary:hover {
-  color: #2780E3;
-}
-.text-success,
-.text-success:hover {
-  color: #3FB618;
-}
-.text-danger,
-.text-danger:hover {
-  color: #FF0039;
-}
-.text-warning,
-.text-warning:hover {
-  color: #FF7518;
-}
-.text-info,
-.text-info:hover {
-  color: #9954BB;
-}
-table a:not(.btn),
-.table a:not(.btn) {
-  text-decoration: underline;
-}
-table .dropdown-menu a,
-.table .dropdown-menu a {
-  text-decoration: none;
-}
-table .success,
-.table .success,
-table .warning,
-.table .warning,
-table .danger,
-.table .danger,
-table .info,
-.table .info {
-  color: #fff;
-}
-table .success a,
-.table .success a,
-table .warning a,
-.table .warning a,
-table .danger a,
-.table .danger a,
-table .info a,
-.table .info a {
-  color: #fff;
-}
-.has-warning .help-block,
-.has-warning .control-label,
-.has-warning .radio,
-.has-warning .checkbox,
-.has-warning .radio-inline,
-.has-warning .checkbox-inline,
-.has-warning.radio label,
-.has-warning.checkbox label,
-.has-warning.radio-inline label,
-.has-warning.checkbox-inline label,
-.has-warning .form-control-feedback {
-  color: #FF7518;
-}
-.has-warning .form-control,
-.has-warning .form-control:focus,
-.has-warning .input-group-addon {
-  border: 1px solid #FF7518;
-}
-.has-error .help-block,
-.has-error .control-label,
-.has-error .radio,
-.has-error .checkbox,
-.has-error .radio-inline,
-.has-error .checkbox-inline,
-.has-error.radio label,
-.has-error.checkbox label,
-.has-error.radio-inline label,
-.has-error.checkbox-inline label,
-.has-error .form-control-feedback {
-  color: #FF0039;
-}
-.has-error .form-control,
-.has-error .form-control:focus,
-.has-error .input-group-addon {
-  border: 1px solid #FF0039;
-}
-.has-success .help-block,
-.has-success .control-label,
-.has-success .radio,
-.has-success .checkbox,
-.has-success .radio-inline,
-.has-success .checkbox-inline,
-.has-success.radio label,
-.has-success.checkbox label,
-.has-success.radio-inline label,
-.has-success.checkbox-inline label,
-.has-success .form-control-feedback {
-  color: #3FB618;
-}
-.has-success .form-control,
-.has-success .form-control:focus,
-.has-success .input-group-addon {
-  border: 1px solid #3FB618;
-}
-.nav-pills > li > a {
-  border-radius: 0;
-}
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus {
-  background-image: none;
-}
-.close {
-  text-decoration: none;
-  text-shadow: none;
-  opacity: 0.4;
-}
-.close:hover,
-.close:focus {
-  opacity: 1;
-}
-.alert {
-  border: none;
-}
-.alert .alert-link {
-  text-decoration: underline;
-  color: #fff;
-}
-.label {
-  border-radius: 0;
-}
-.progress {
-  height: 8px;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.progress .progress-bar {
-  font-size: 8px;
-  line-height: 8px;
-}
-.panel-heading,
-.panel-footer {
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-}
-.panel-default .close {
-  color: #333333;
-}
-a.list-group-item-success.active {
-  background-color: #3FB618;
-}
-a.list-group-item-success.active:hover,
-a.list-group-item-success.active:focus {
-  background-color: #379f15;
-}
-a.list-group-item-warning.active {
-  background-color: #FF7518;
-}
-a.list-group-item-warning.active:hover,
-a.list-group-item-warning.active:focus {
-  background-color: #fe6600;
-}
-a.list-group-item-danger.active {
-  background-color: #FF0039;
-}
-a.list-group-item-danger.active:hover,
-a.list-group-item-danger.active:focus {
-  background-color: #e60033;
-}
-.modal .close {
-  color: #333333;
-}
-.popover {
-  color: #333333;
+/* Lighter Background for Okaidia-Theme*/
+pre[class*="language-"] {
+  background: #2a2a2a;
 }
 #main {
   margin-top: 62px;

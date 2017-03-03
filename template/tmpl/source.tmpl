@@ -3,6 +3,13 @@
 ?>
 <section>
     <article>
-        <pre><code class="<?js= this.navOptions.linenums ? 'line-numbers' : '' ?> language-<?js= data.lang ?>"><?js= data.code ?></code></pre>
+        <pre id="line"><code data-line class="<?js= this.navOptions.linenums ? 'line-numbers' : '' ?> language-<?js= data.lang ?>"><?js= data.code ?></code></pre>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                Prism.hooks.add("complete", function () {
+                    window.dispatchEvent(new HashChangeEvent("hashchange", { oldURL: window.location.href, newURL: window.location.href}));
+                });
+            });
+        </script>
     </article>
 </section>

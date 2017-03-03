@@ -159,6 +159,23 @@ $( function () {
 	Prism.hooks.add("complete", function () {
 		window.dispatchEvent(new HashChangeEvent("hashchange", { oldURL: window.location.href, newURL: window.location.href}));
 
+		if ($("#line").length > 0) { // should only exist on source view
+			$(".line-numbers-rows span").each(function (index, row) {
+				$(row).on("click", function (event) {
+					event.preventDefault(); window.location.hash = "line."+ (index+1);
+					window.dispatchEvent(new HashChangeEvent("hashchange"));
+				});
+			});
+		} else {
+			$(".line-numbers-rows span").each(function (index, row) {
+				var $row = $(row);
+				$row.addClass("disable-pointer");
+				$row.parent().addClass("disable-pointer");
+			});
+		}
+	});
+
+	window.addEventListener("hashchange", function () {
 		var documentHash = document.location.hash || null;
 		if (documentHash) {
 			var matches = /^#line.([0-9]+?)$/i.exec(documentHash);

@@ -7268,6 +7268,16 @@ pre[class*="language-"] {
 .line-highlight {
   background: linear-gradient(to right, rgba(158, 122, 102, 0.25) 70%, rgba(153, 122, 102, 0));
 }
+.line-numbers .line-numbers-rows,
+.line-numbers-rows > span {
+  pointer-events: auto;
+  cursor: pointer;
+}
+.line-numbers .line-numbers-rows.disable-pointer,
+.line-numbers-rows > span.disable-pointer {
+  pointer-events: none;
+  cursor: initial;
+}
 #main {
   margin-top: 62px;
 }

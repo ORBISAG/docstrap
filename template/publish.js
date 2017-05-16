@@ -453,12 +453,13 @@ function buildNav(members) {
   }
 
   if (members.tutorials.length) {
-
-    members.tutorials.forEach(function (t) {
-
+    members.tutorials.sort(function (tutorialA, tutorialB) {
+      if (tutorialA.title < tutorialB.title) { return -1; }
+      if (tutorialA.title > tutorialB.title) { return 1; }
+      return 0;
+    }).forEach(function (t) {
       nav.tutorial.members.push(tutoriallink(t.name));
     });
-
   }
 
   if (members.globals.length) {

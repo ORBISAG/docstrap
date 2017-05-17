@@ -7009,6 +7009,7 @@ legend {
   background-repeat: no-repeat;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff484e55', endColorstr='#ff313539', GradientType=0);
   filter: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   color: #fff;
 }
 .nav .open > a,

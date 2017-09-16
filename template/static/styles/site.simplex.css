@@ -6729,8 +6729,7 @@ button.close {
 .btn {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.btn-default,
-.btn-default:hover {
+.btn-default {
   background-image: -webkit-linear-gradient(#4f5151, #474949 6%, #3f4141);
   background-image: -o-linear-gradient(#4f5151, #474949 6%, #3f4141);
   background-image: linear-gradient(#4f5151, #474949 6%, #3f4141);
@@ -6739,8 +6738,7 @@ button.close {
   filter: none;
   border: 1px solid #2e2f2f;
 }
-.btn-primary,
-.btn-primary:hover {
+.btn-primary {
   background-image: -webkit-linear-gradient(#e72510, #D9230F 6%, #cb210e);
   background-image: -o-linear-gradient(#e72510, #D9230F 6%, #cb210e);
   background-image: linear-gradient(#e72510, #D9230F 6%, #cb210e);
@@ -6749,8 +6747,7 @@ button.close {
   filter: none;
   border: 1px solid #a91b0c;
 }
-.btn-success,
-.btn-success:hover {
+.btn-success {
   background-image: -webkit-linear-gradient(#4da309, #469408 6%, #3f8507);
   background-image: -o-linear-gradient(#4da309, #469408 6%, #3f8507);
   background-image: linear-gradient(#4da309, #469408 6%, #3f8507);
@@ -6759,8 +6756,7 @@ button.close {
   filter: none;
   border: 1px solid #2f6405;
 }
-.btn-info,
-.btn-info:hover {
+.btn-info {
   background-image: -webkit-linear-gradient(#02a5de, #029ACF 6%, #028fc0);
   background-image: -o-linear-gradient(#02a5de, #029ACF 6%, #028fc0);
   background-image: linear-gradient(#02a5de, #029ACF 6%, #028fc0);
@@ -6769,8 +6765,7 @@ button.close {
   filter: none;
   border: 1px solid #02749c;
 }
-.btn-warning,
-.btn-warning:hover {
+.btn-warning {
   background-image: -webkit-linear-gradient(#a54caa, #9B479F 6%, #914294);
   background-image: -o-linear-gradient(#a54caa, #9B479F 6%, #914294);
   background-image: linear-gradient(#a54caa, #9B479F 6%, #914294);
@@ -6779,8 +6774,7 @@ button.close {
   filter: none;
   border: 1px solid #79377c;
 }
-.btn-danger,
-.btn-danger:hover {
+.btn-danger {
   background-image: -webkit-linear-gradient(#e08b27, #D9831F 6%, #cc7b1d);
   background-image: -o-linear-gradient(#e08b27, #D9831F 6%, #cc7b1d);
   background-image: linear-gradient(#e08b27, #D9831F 6%, #cc7b1d);
@@ -7136,6 +7130,7 @@ pre.line-numbers {
 }
 pre.line-numbers > code {
   position: relative;
+  white-space: inherit;
 }
 .line-numbers .line-numbers-rows {
   position: absolute;

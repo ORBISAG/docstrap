@@ -39,10 +39,10 @@ var fs = require( "fs" );
  * @private
  */
 var jsdocTestPages = {
-	dest      : "./testdocs",
-	tutorials : "./fixtures/tutorials",
+	dest      : "./test",
+	tutorials : "./assets/fixtures/tutorials",
 	template  : "./template",
-	config    : "./fixtures/testdocs.conf.json",
+	config    : "./assets/fixtures/testdocs.conf.json",
 	options   : " --lenient --verbose --recurse"
 };
 /**
@@ -52,11 +52,11 @@ var jsdocTestPages = {
  * @private
  */
 var jsdocExamplePages = {
-	src       : ["./fixtures/", "./README.md"],
+	src       : ["./assets/fixtures/", "./README.md"],
 	dest      : "./themes",
-	tutorials : "./fixtures/tutorials",
+	tutorials : "./assets/fixtures/tutorials",
 	template  : "./template",
-	config    : "./fixtures/example.conf.json",
+	config    : "./assets/fixtures/example.conf.json",
 	options   : " --lenient --verbose --recurse"
 };
 
@@ -66,7 +66,7 @@ var jsdocExamplePages = {
  */
 var projectDocs = {
 	src       : ["./Gruntfile.js", "./README.md", "./template/publish.js"],
-	dest      : "./dox",
+	dest      : "./doc",
 	tutorials : "",
 	template  : "./template",
 	config    : "./template/jsdoc.conf.json",
@@ -136,7 +136,7 @@ var tasks = {
 	},
 	jsdoc  : {
 		testdocs : {
-			src     : ['fixtures/**.js', "./README.md"],
+			src     : ['assets/fixtures/**.js', "./README.md"],
 			jsdoc   : "./node_modules/jsdoc/jsdoc.js",
 			options : {
 				destination : './testdocs',
@@ -285,7 +285,7 @@ module.exports = function ( grunt ) {
 			if ( err ) {return done( err );}
 
 			_.each( list.themes, function ( entry ) {
-				var conf = grunt.file.readJSON( './fixtures/example.conf.json' );
+				var conf = grunt.file.readJSON( './assets/fixtures/example.conf.json' );
 				conf.templates.theme = entry.name.toLowerCase();
 				grunt.file.write( "tmp/example.conf." + conf.templates.theme + ".json", JSON.stringify( conf, null, 4 ) );
 

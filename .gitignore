@@ -4,10 +4,11 @@ bower_components*
 *.map
 .idea*
 ringojs-0.9*
-dox*
-testdocs/*
+doc*
+test*
 themes*
 npm-debug.log
 .DS_Store
 ._*
 .vscode
+assets*

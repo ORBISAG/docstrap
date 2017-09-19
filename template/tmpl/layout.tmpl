@@ -203,6 +203,9 @@ $( function () {
 		anchorName  : function ( i, heading, prefix ) {
 			return $( heading ).attr( "id" ) || ( prefix + i );
 		},
+		headerText: function(i, heading, $heading) {
+			return $heading.text().replace(/^\(.*?\)\s(.*?)\(.*$/g, "$1");
+		},
 		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
 		showAndHide : false,
 		smoothScrolling: true

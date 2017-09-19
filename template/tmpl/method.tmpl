@@ -4,8 +4,19 @@ var self = this;
 ?>
 <hr>
 <dt>
-    <h4 class="name" id="<?js= id ?>"><?js= data.attribs + (kind === 'class' ? 'new ' : '') + name + (kind !== 'event' ? data.signature : '') ?></h4>
-    
+    <h4 class="name" id="<?js= id ?>"><?js= data.attribs + (kind === 'class' ? 'new ' : '') + name + (kind !== 'event' ? data.signature : '') ?><?js
+        if (data.returns && data.returns.length == 1 && data.returns[0].type) {
+            print(": ");
+            for (var i = 0, l = data.returns[0].type.names.length; i < l; i++) {
+                var returnName = data.returns[0].type.names[i].split(".");
+                print(self.linkto(data.returns[0].type.names[i], returnName[returnName.length - 1]));
+                if (i > 0) {
+                    print (" | ");
+                }
+            }
+        }
+    ?></h4>
+
     <?js if (data.summary) { ?>
     <p class="summary"><?js= summary ?></p>
     <?js } ?>

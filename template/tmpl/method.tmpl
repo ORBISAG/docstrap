@@ -4,18 +4,7 @@ var self = this;
 ?>
 <hr>
 <dt>
-    <h4 class="name" id="<?js= id ?>"><?js= data.attribs + (kind === 'class' ? 'new ' : '') + name + (kind !== 'event' ? data.signature : '') ?><?js
-        if (data.returns && data.returns.length == 1 && data.returns[0].type) {
-            print(": ");
-            for (var i = 0, l = data.returns[0].type.names.length; i < l; i++) {
-                var returnName = data.returns[0].type.names[i].split(".");
-                print(self.linkto(data.returns[0].type.names[i], returnName[returnName.length - 1]));
-                if (i > 0) {
-                    print (" | ");
-                }
-            }
-        }
-    ?></h4>
+    <h4 class="name" id="<?js= id ?>"><?js= data.attribs + (kind === 'class' ? 'new ' : '') + name + (kind !== 'event' ? data.signature : '') ?></h4>
 
     <?js if (data.summary) { ?>
     <p class="summary"><?js= summary ?></p>
@@ -88,21 +77,38 @@ var self = this;
             <?js= self.partial('exceptions.tmpl', r) ?>
         <?js });
     } } ?>
-
-    <?js if (data.returns && returns.length) { ?>
-    <h5>Returns:</h5>
-    <?js if (returns.length > 1) { ?><ul><?js
-        returns.forEach(function(r) { ?>
-            <li><?js= self.partial('returns.tmpl', r) ?></li>
-        <?js });
-    ?></ul><?js } else {
-        returns.forEach(function(r) { ?>
-            <?js= self.partial('returns.tmpl', r) ?>
-        <?js });
-    } } ?>
-
-    <?js if (data.examples && examples.length) { ?>
-        <h5>Example<?js= examples.length > 1? 's':'' ?></h5>
-        <?js= this.partial('examples.tmpl', examples) ?>
-    <?js } ?>
 </dd>
+
+<?js if (data.returns && returns.length) { ?>
+<dt class="tag-returns method-doc-label method-doc-details-label">Returns:</dt>
+<dd class="tag-returns"><?js if (returns.length > 1) { ?><ul><?js
+    returns.forEach(function(r) { ?>
+        <li><?js= self.partial('returns.tmpl', r) ?></li>
+    <?js });
+?></ul><?js } else {
+    returns.forEach(function(r) { ?>
+        <?js= self.partial('returns.tmpl', r) ?>
+    <?js });
+} } ?></dd>
+
+<?js if (data.examples && examples.length) { ?>
+<dt class="tag-example method-doc-label method-doc-details-label">Example<?js= examples.length > 1? 's':'' ?></dt>
+<dd class="tag-example"><?js= this.partial('examples.tmpl', examples) ?></dd>
+<?js } ?>
+
+<?js if (data.meta && this.navOptions.outputSourceFiles) {?>
+<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+<dd class="tag-source">
+    <ul class="dummy">
+        <li>
+            <?js= self.linkto(meta.shortpath) ?><?js if (this.navOptions.linenums) { ?>,
+            <?js= self.linkto(meta.shortpath, 'line ' + meta.lineno, null, 'line.' + meta.lineno) ?><?js } ?>
+        </li>
+    </ul>
+</dd>
+<?js } else if (data.meta && this.navOptions.outputSourcePath) { ?>
+<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+<dd class="tag-source">
+    <?js= meta.shortpath ?>
+</dd>
+<?js } ?>

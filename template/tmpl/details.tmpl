@@ -134,25 +134,6 @@ var self = this;
 	</dd>
 	<?js } ?>
 
-
-
-	<?js if (data.meta && this.navOptions.outputSourceFiles) {?>
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<ul class="dummy">
-			<li>
-				<?js= self.linkto(meta.shortpath) ?><?js if (this.navOptions.linenums) { ?>,
-				<?js= self.linkto(meta.shortpath, 'line ' + meta.lineno, null, 'line.' + meta.lineno) ?><?js } ?>
-			</li>
-		</ul>
-	</dd>
-	<?js } else if (data.meta && this.navOptions.outputSourcePath) { ?>
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<?js= meta.shortpath ?>
-	</dd>
-	<?js } ?>
-
 	<?js if (data.tutorials && tutorials.length) {?>
 	<dt class="tag-tutorial method-doc-label method-doc-details-label">Tutorials:</dt>
 	<dd class="tag-tutorial">

@@ -6,8 +6,14 @@ data.forEach(function(name, i) {
     var displayName = name;
 
     if (name.indexOf("<") < 0) {
-        var nameSplit = name.split(".");
-        displayName = nameSplit[nameSplit.length - 1];
+        var splitter = ".";
+        if (name.indexOf("#") > -1) {
+            splitter = "#";
+        } else if (name.indexOf("~") > -1) {
+            splitter = "~";
+        }
+
+        var nameSplit = name.split(splitter);
     }
 ?>
 <span class="param-type"><?js=self.linkto(name, self.htmlsafe(displayName)) ?></span>

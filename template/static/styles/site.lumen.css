@@ -7653,3 +7653,8 @@ code {
     max-height: none;
   }
 }
+
+
+.toc-h3.highlight {
+  font-weight: bold;
+}

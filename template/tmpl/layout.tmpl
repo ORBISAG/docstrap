@@ -208,6 +208,13 @@ $( function () {
 							.replace(/^(?:\(.*?\)\s)?(.*?)(\().*(\))$/g, "$1$2$3")
 							.replace(/^(.*?)\s*?\:.*?$/g, "$1");
 		},
+		itemClass: function(i, heading, $heading, prefix) {
+			var isReadmeHeading = $heading.parents("[class*='readme']").length > 0;
+			var isH3Heading = $heading[0].tagName.toLowerCase() === "h3";
+			var additionalClass = !isReadmeHeading && isH3Heading ? " highlight" : "";
+
+			return prefix + '-' + $heading[0].tagName.toLowerCase() + additionalClass;
+		},
 		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
 		showAndHide : false,
 		smoothScrolling: true

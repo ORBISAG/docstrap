@@ -7174,6 +7174,7 @@ pre.line-numbers {
 }
 pre.line-numbers > code {
   position: relative;
+  white-space: inherit;
 }
 .line-numbers .line-numbers-rows {
   position: absolute;
@@ -7773,4 +7774,7 @@ code {
 }
 dt.method-doc-details-label {
   margin-top: 15px;
+}
+.toc-h3.highlight {
+  font-weight: bold;
 }

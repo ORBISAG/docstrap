@@ -11,7 +11,7 @@
     "grunt-shell": "~2.1.0",
     "jsdoc": "~3.5.5",
     "lodash": "~4.17.4",
-    "request": "^2.82.0"
+    "request": "^2.83.0"
   },
   "license": "MIT",
   "keywords": [
@@ -36,7 +36,7 @@
   },
   "main": "./template/publish.js",
   "dependencies": {
-    "moment": "^2.18.1",
+    "moment": "^2.19.0",
     "sanitize-html": "^1.14.1"
   }
 }

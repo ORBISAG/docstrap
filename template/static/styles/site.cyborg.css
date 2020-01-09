@@ -7262,6 +7262,9 @@ html,
 body {
   font-size: 20px;
 }
+a {
+  text-decoration: none;
+}
 /* Lighter Background for Okaidia-Theme*/
 pre[class*="language-"] {
   background: #2a2a2a;

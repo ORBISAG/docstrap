@@ -3884,7 +3884,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   line-height: 1;
   color: #272B30;
   text-align: center;
-  background-color: #3A3F44;
+  background-color: #999;
   border: 1px solid rgba(0, 0, 0, 0.6);
   border-radius: 4px;
 }
@@ -6721,50 +6721,28 @@ button.close {
     display: none !important;
   }
 }
-.navbar-default,
-.navbar-inverse {
-  border: 1px solid rgba(0, 0, 0, 0.6);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-}
-@media (min-width: 768px) {
-  .navbar-default .navbar-nav > li > a,
-  .navbar-inverse .navbar-nav > li > a {
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  .navbar-default .navbar-nav > li > a:hover,
-  .navbar-inverse .navbar-nav > li > a:hover {
-    border-left-color: transparent;
-  }
-  .navbar-default .nav .open > a,
-  .navbar-inverse .nav .open > a {
-    border-color: transparent;
-  }
-  .navbar-default .navbar-nav > li.active > a,
-  .navbar-inverse .navbar-nav > li.active > a {
-    border-left-color: transparent;
-  }
-  .navbar-default .navbar-form,
-  .navbar-inverse .navbar-form {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-}
-.navbar-default {
+.navbar {
   background-image: -webkit-linear-gradient(#484e55, #3A3F44 60%, #313539);
   background-image: -o-linear-gradient(#484e55, #3A3F44 60%, #313539);
   background-image: linear-gradient(#484e55, #3A3F44 60%, #313539);
   background-repeat: no-repeat;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff484e55', endColorstr='#ff313539', GradientType=0);
   filter: none;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
-.navbar-default .navbar-nav > li > a:hover {
+.navbar .navbar-nav > li > a {
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+.navbar .navbar-nav > li > a:hover {
   background-image: -webkit-linear-gradient(#020202, #101112 40%, #141618);
   background-image: -o-linear-gradient(#020202, #101112 40%, #141618);
   background-image: linear-gradient(#020202, #101112 40%, #141618);
   background-repeat: no-repeat;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff020202', endColorstr='#ff141618', GradientType=0);
   filter: none;
+  border-left-color: transparent;
 }
 .navbar-inverse {
   background-image: -webkit-linear-gradient(#8a9196, #7A8288 60%, #70787d);
@@ -6784,6 +6762,16 @@ button.close {
   background-repeat: no-repeat;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff404448', endColorstr='#ff53595d', GradientType=0);
   filter: none;
+}
+.navbar .nav .open > a {
+  border-color: transparent;
+}
+.navbar-nav > li.active > a {
+  border-left-color: transparent;
+}
+.navbar-form {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .btn,
 .btn:hover {
@@ -6957,6 +6945,7 @@ textarea {
   border-color: #f89406;
 }
 .has-warning .input-group-addon {
+  background-color: #3A3F44;
   border-color: rgba(0, 0, 0, 0.6);
 }
 .has-error .help-block,
@@ -6977,6 +6966,7 @@ textarea {
   border-color: #ee5f5b;
 }
 .has-error .input-group-addon {
+  background-color: #3A3F44;
   border-color: rgba(0, 0, 0, 0.6);
 }
 .has-success .help-block,
@@ -6997,12 +6987,14 @@ textarea {
   border-color: #62c462;
 }
 .has-success .input-group-addon {
+  background-color: #3A3F44;
   border-color: rgba(0, 0, 0, 0.6);
 }
 legend {
   color: #fff;
 }
 .input-group-addon {
+  background-color: #3A3F44;
   background-image: -webkit-linear-gradient(#484e55, #3A3F44 60%, #313539);
   background-image: -o-linear-gradient(#484e55, #3A3F44 60%, #313539);
   background-image: linear-gradient(#484e55, #3A3F44 60%, #313539);
@@ -7194,6 +7186,7 @@ pre[class*="language-"] {
   background: none;
   text-shadow: 0 1px white;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -7278,7 +7271,7 @@ pre[class*="language-"] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: #a67f59;
+  color: #9a6e3a;
   background: rgba(255, 255, 255, 0.5);
 }
 .token.atrule,
@@ -7286,7 +7279,8 @@ pre[class*="language-"] {
 .token.keyword {
   color: #07a;
 }
-.token.function {
+.token.function,
+.token.class-name {
   color: #DD4A68;
 }
 .token.regex,
@@ -7315,6 +7309,7 @@ pre[class*="language-"] {
   background: none;
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -7387,7 +7382,8 @@ pre[class*="language-"] {
 }
 .token.atrule,
 .token.attr-value,
-.token.function {
+.token.function,
+.token.class-name {
   color: #e6db74;
 }
 .token.keyword {
@@ -7449,12 +7445,16 @@ pre[data-line] {
   top: auto;
   bottom: .4em;
 }
-pre.line-numbers {
+.line-numbers .line-highlight:before,
+.line-numbers .line-highlight:after {
+  content: none;
+}
+pre[class*="language-"].line-numbers {
   position: relative;
   padding-left: 3.8em;
   counter-reset: linenumber;
 }
-pre.line-numbers > code {
+pre[class*="language-"].line-numbers > code {
   position: relative;
   white-space: inherit;
 }
@@ -7485,26 +7485,31 @@ pre.line-numbers > code {
   padding-right: 0.8em;
   text-align: right;
 }
-pre.code-toolbar {
+div.code-toolbar {
   position: relative;
 }
-pre.code-toolbar > .toolbar {
+div.code-toolbar > .toolbar {
   position: absolute;
   top: .3em;
   right: .2em;
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
 }
-pre.code-toolbar:hover > .toolbar {
+div.code-toolbar:hover > .toolbar {
   opacity: 1;
 }
-pre.code-toolbar > .toolbar .toolbar-item {
+/* Separate line b/c rules are thrown out if selector is invalid.
+   IE11 and old Edge versions don't support :focus-within. */
+div.code-toolbar:focus-within > .toolbar {
+  opacity: 1;
+}
+div.code-toolbar > .toolbar .toolbar-item {
   display: inline-block;
 }
-pre.code-toolbar > .toolbar a {
+div.code-toolbar > .toolbar a {
   cursor: pointer;
 }
-pre.code-toolbar > .toolbar button {
+div.code-toolbar > .toolbar button {
   background: none;
   border: 0;
   color: inherit;
@@ -7517,9 +7522,9 @@ pre.code-toolbar > .toolbar button {
   -moz-user-select: none;
   -ms-user-select: none;
 }
-pre.code-toolbar > .toolbar a,
-pre.code-toolbar > .toolbar button,
-pre.code-toolbar > .toolbar span {
+div.code-toolbar > .toolbar a,
+div.code-toolbar > .toolbar button,
+div.code-toolbar > .toolbar span {
   color: #bbb;
   font-size: .8em;
   padding: 0 .5em;
@@ -7528,12 +7533,12 @@ pre.code-toolbar > .toolbar span {
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
   border-radius: .5em;
 }
-pre.code-toolbar > .toolbar a:hover,
-pre.code-toolbar > .toolbar a:focus,
-pre.code-toolbar > .toolbar button:hover,
-pre.code-toolbar > .toolbar button:focus,
-pre.code-toolbar > .toolbar span:hover,
-pre.code-toolbar > .toolbar span:focus {
+div.code-toolbar > .toolbar a:hover,
+div.code-toolbar > .toolbar a:focus,
+div.code-toolbar > .toolbar button:hover,
+div.code-toolbar > .toolbar button:focus,
+div.code-toolbar > .toolbar span:hover,
+div.code-toolbar > .toolbar span:focus {
   color: inherit;
   text-decoration: none;
 }
@@ -7702,4 +7707,41 @@ dt.method-doc-details-label {
 }
 .toc-h3.highlight {
   font-weight: bold;
+}
+html,
+body {
+  font-size: 14px;
+}
+.tutorial-section a {
+  text-decoration: underline;
+}
+.tutorial-section header a {
+  text-decoration: none;
+}
+.tutorial-section h2,
+.tutorial-section .h2,
+.tutorial-section h3,
+.tutorial-section .h3 {
+  border-bottom: 4px solid #EEE;
+  padding-bottom: .5rem;
+}
+.tutorial-section h2,
+.tutorial-section .h2 {
+  font-size: 1.5rem;
+}
+.tutorial-section h3,
+.tutorial-section .h3 {
+  font-size: 1.25rem;
+}
+.tutorial-section p {
+  font-size: 1rem;
+  margin: 0 0 1.1rem;
+}
+.tutorial-section blockquote {
+  font-size: 1rem;
+  font-style: italic;
+}
+.tutorial-section code {
+  font-size: .9rem;
+  background-color: #DDD;
 }

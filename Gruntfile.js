@@ -228,7 +228,7 @@ module.exports = function ( grunt ) {
 	 * @name build
 	 * @memberof module:Gruntfile
 	 */
-	grunt.registerTask( "build", "Builds the whole shebang. Which means creating testdocs, the bootswatch samples and then resetting the styles directory", ["uglify:template", "testdocs", "shell:dox", "bootswatch", "examples", "apply", "copy"] );
+	grunt.registerTask( "build", "Builds the whole shebang. Which means creating testdocs, the bootswatch samples and then resetting the styles directory", ["uglify:template", "bootswatch", "apply", "copy"] );
 	/**
 	 * TASK: Applies the theme in the conf file and applies it to the styles directory.
 	 * @name apply
@@ -236,8 +236,10 @@ module.exports = function ( grunt ) {
 	 */
 	grunt.registerTask( "apply", "Applies the theme in the conf file and applies it to the styles directory", function () {
 		var def = {
-			less          : "http://bootswatch.com/" + tasks.jsdocConf.templates.theme + "/bootswatch.less",
-			lessVariables : "http://bootswatch.com/" + tasks.jsdocConf.templates.theme + "/variables.less"
+			less          : `https://raw.githubusercontent.com/thomaspark/bootswatch/v3/${tasks.jsdocConf.templates.theme}/bootswatch.less`,
+			lessVariables : `https://raw.githubusercontent.com/thomaspark/bootswatch/v3/${tasks.jsdocConf.templates.theme}/variables.less`
+			// less          : "http://bootswatch.com/" + tasks.jsdocConf.templates.theme + "/bootswatch.less",
+			// lessVariables : "http://bootswatch.com/" + tasks.jsdocConf.templates.theme + "/variables.less"
 		};
 		grunt.registerTask( "swatch-apply", _.partial( applyTheme, grunt, def ) );
 		grunt.task.run( ["swatch-apply"] );

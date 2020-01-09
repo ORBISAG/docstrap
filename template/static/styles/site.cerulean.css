@@ -6721,7 +6721,7 @@ button.close {
     display: none !important;
   }
 }
-.navbar-default {
+.navbar {
   background-image: -webkit-linear-gradient(#54b4eb, #2FA4E7 60%, #1d9ce5);
   background-image: -o-linear-gradient(#54b4eb, #2FA4E7 60%, #1d9ce5);
   background-image: linear-gradient(#54b4eb, #2FA4E7 60%, #1d9ce5);
@@ -6848,13 +6848,6 @@ button.close {
 .panel-info .panel-title {
   color: #fff;
 }
-.panel-primary > .panel-heading .badge,
-.panel-success > .panel-heading .badge,
-.panel-warning > .panel-heading .badge,
-.panel-danger > .panel-heading .badge,
-.panel-info > .panel-heading .badge {
-  background-color: #fff;
-}
 /**
  * prism.js default theme for JavaScript, CSS and HTML
  * Based on dabblet (http://dabblet.com)
@@ -6866,6 +6859,7 @@ pre[class*="language-"] {
   background: none;
   text-shadow: 0 1px white;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -6950,7 +6944,7 @@ pre[class*="language-"] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: #a67f59;
+  color: #9a6e3a;
   background: rgba(255, 255, 255, 0.5);
 }
 .token.atrule,
@@ -6958,7 +6952,8 @@ pre[class*="language-"] {
 .token.keyword {
   color: #07a;
 }
-.token.function {
+.token.function,
+.token.class-name {
   color: #DD4A68;
 }
 .token.regex,
@@ -6987,6 +6982,7 @@ pre[class*="language-"] {
   background: none;
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -7059,7 +7055,8 @@ pre[class*="language-"] {
 }
 .token.atrule,
 .token.attr-value,
-.token.function {
+.token.function,
+.token.class-name {
   color: #e6db74;
 }
 .token.keyword {
@@ -7121,12 +7118,16 @@ pre[data-line] {
   top: auto;
   bottom: .4em;
 }
-pre.line-numbers {
+.line-numbers .line-highlight:before,
+.line-numbers .line-highlight:after {
+  content: none;
+}
+pre[class*="language-"].line-numbers {
   position: relative;
   padding-left: 3.8em;
   counter-reset: linenumber;
 }
-pre.line-numbers > code {
+pre[class*="language-"].line-numbers > code {
   position: relative;
   white-space: inherit;
 }
@@ -7157,26 +7158,31 @@ pre.line-numbers > code {
   padding-right: 0.8em;
   text-align: right;
 }
-pre.code-toolbar {
+div.code-toolbar {
   position: relative;
 }
-pre.code-toolbar > .toolbar {
+div.code-toolbar > .toolbar {
   position: absolute;
   top: .3em;
   right: .2em;
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
 }
-pre.code-toolbar:hover > .toolbar {
+div.code-toolbar:hover > .toolbar {
   opacity: 1;
 }
-pre.code-toolbar > .toolbar .toolbar-item {
+/* Separate line b/c rules are thrown out if selector is invalid.
+   IE11 and old Edge versions don't support :focus-within. */
+div.code-toolbar:focus-within > .toolbar {
+  opacity: 1;
+}
+div.code-toolbar > .toolbar .toolbar-item {
   display: inline-block;
 }
-pre.code-toolbar > .toolbar a {
+div.code-toolbar > .toolbar a {
   cursor: pointer;
 }
-pre.code-toolbar > .toolbar button {
+div.code-toolbar > .toolbar button {
   background: none;
   border: 0;
   color: inherit;
@@ -7189,9 +7195,9 @@ pre.code-toolbar > .toolbar button {
   -moz-user-select: none;
   -ms-user-select: none;
 }
-pre.code-toolbar > .toolbar a,
-pre.code-toolbar > .toolbar button,
-pre.code-toolbar > .toolbar span {
+div.code-toolbar > .toolbar a,
+div.code-toolbar > .toolbar button,
+div.code-toolbar > .toolbar span {
   color: #bbb;
   font-size: .8em;
   padding: 0 .5em;
@@ -7200,12 +7206,12 @@ pre.code-toolbar > .toolbar span {
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
   border-radius: .5em;
 }
-pre.code-toolbar > .toolbar a:hover,
-pre.code-toolbar > .toolbar a:focus,
-pre.code-toolbar > .toolbar button:hover,
-pre.code-toolbar > .toolbar button:focus,
-pre.code-toolbar > .toolbar span:hover,
-pre.code-toolbar > .toolbar span:focus {
+div.code-toolbar > .toolbar a:hover,
+div.code-toolbar > .toolbar a:focus,
+div.code-toolbar > .toolbar button:hover,
+div.code-toolbar > .toolbar button:focus,
+div.code-toolbar > .toolbar span:hover,
+div.code-toolbar > .toolbar span:focus {
   color: inherit;
   text-decoration: none;
 }
@@ -7731,4 +7737,41 @@ dt.method-doc-details-label {
 }
 .toc-h3.highlight {
   font-weight: bold;
+}
+html,
+body {
+  font-size: 14px;
+}
+.tutorial-section a {
+  text-decoration: underline;
+}
+.tutorial-section header a {
+  text-decoration: none;
+}
+.tutorial-section h2,
+.tutorial-section .h2,
+.tutorial-section h3,
+.tutorial-section .h3 {
+  border-bottom: 4px solid #EEE;
+  padding-bottom: .5rem;
+}
+.tutorial-section h2,
+.tutorial-section .h2 {
+  font-size: 1.5rem;
+}
+.tutorial-section h3,
+.tutorial-section .h3 {
+  font-size: 1.25rem;
+}
+.tutorial-section p {
+  font-size: 1rem;
+  margin: 0 0 1.1rem;
+}
+.tutorial-section blockquote {
+  font-size: 1rem;
+  font-style: italic;
+}
+.tutorial-section code {
+  font-size: .9rem;
+  background-color: #DDD;
 }

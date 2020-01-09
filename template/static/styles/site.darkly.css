@@ -7577,7 +7577,7 @@ body {
   font-size: 1rem;
   font-style: italic;
 }
-.tutorial-section code {
+.tutorial-section ol code {
   font-size: .9rem;
   background-color: #DDD;
 }

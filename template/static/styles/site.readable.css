@@ -7766,3 +7766,8 @@ dt.method-doc-details-label {
   font-size: .9em;
   background-color: #DDD;
 }
+.tutorial-section hr {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  border-top: 4px solid #DDD;
+}

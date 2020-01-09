@@ -9,6 +9,13 @@
 @import (less) "../bower_components/prism/plugins/toolbar/prism-toolbar.css";
 
 @headerHeight: 62px;
+@font-family-sans-serif:  "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+@font-family-monospace:   "Fira Code", Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-size-base:          20px;
+
+html, body {
+    font-size: @font-size-base;
+}
 
 /* Lighter Background for Okaidia-Theme*/
 pre[class*="language-"] {
@@ -219,10 +226,6 @@ dt.method-doc-details-label {
 
 .toc-h3.highlight {
     font-weight: bold;
-}
-
-html, body {
-    font-size: @font-size-base;
 }
 
 .tutorial-section {

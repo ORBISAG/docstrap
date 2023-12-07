@@ -2,9 +2,9 @@
   "name": "ink-docstrap",
   "version": "0.5.3",
   "dependencies": {
-    "jquery": "~3.2.1",
+    "jquery": "~3.7.1",
     "jquery.localScroll": "~2.0.0",
     "bootstrap": "~3.3.7",
-    "prism": "^1.8.1"
+    "prism": "^1.29.0"
   }
 }

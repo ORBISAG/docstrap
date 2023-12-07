@@ -157,15 +157,8 @@ Prism.hooks.add("before-highlightall", function () {
 			$code
 				.addClass("language-" + lang)
 		}
-	} );
-
-	Prism.hooks.add('complete', function () {
-				.addClass("language-" + lang)
-				.addClass("line-numbers");
-			$code
-				.addClass("language-" + lang)
-		}
-	} );
+	});
+});
 
 Prism.hooks.add("complete", function () {
 	window.dispatchEvent(new HashChangeEvent("hashchange", { oldURL: window.location.href, newURL: window.location.href}));

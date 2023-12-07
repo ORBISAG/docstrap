@@ -361,7 +361,7 @@ function applyTheme( grunt, definition ) {
  * @private
  */
 function getBootSwatchList( done ) {
-	request('http://api.bootswatch.com/3/', function(error, response, body) {
+	request('https://bootswatch.com/api/3.json', function(error, response, body) {
 		if (error) {
 			return done(error);
 		}

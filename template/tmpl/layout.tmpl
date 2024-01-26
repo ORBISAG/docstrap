@@ -135,7 +135,7 @@ function goToHashedLine() {
 }
 
 Prism.hooks.add("before-highlightall", function () {
-	$(".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+	$(".readme-section pre, pre.prettyprint.source" ).each( function () {
 		var $this = $(this); // the pre element
 		var $code = $this.find("code"); // the code element
 
@@ -146,16 +146,16 @@ Prism.hooks.add("before-highlightall", function () {
 			$code.html(content.replace(lang[0], "").trim());
 			lang = lang[1];
 		} else {
-			var langClassMatch = $this.attr("class").match(/lang\-(\S+)/);
+			var langClassMatch = $this.attr("class").match(/lang(?:uage)?\-(\S+)/);
 			lang = langClassMatch ? langClassMatch[1] : "javascript";
 		}
 
 		if (lang) {
 			$this
-				.addClass("language-" + lang)
+				.addClass("lang-" + lang)
 				.addClass("line-numbers");
 			$code
-				.addClass("language-" + lang)
+				.addClass("lang-" + lang)
 		}
 	});
 });
